@@ -1,6 +1,6 @@
 # JASPER version
 NAME=JASPER
-VERSION = 1.0.3
+VERSION = 1.0.4
 NCPU = $(shell grep -c '^processor' /proc/cpuinfo 2>/dev/null || sysctl hw.ncpu 2>/dev/null || echo 1)
 
 # Component versions

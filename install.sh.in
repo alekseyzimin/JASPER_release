@@ -19,7 +19,8 @@ export PKG_CONFIG_PATH=$LIBDIR/pkgconfig:$PKG_CONFIG_PATH
 (cd global-1 && ./configure --prefix=$DEST --bindir=$BINDIR --libdir=$LIBDIR && make -j $NUM_THREADS install-special)
 (cd global-1/JASPER && tar xzf jellyfish-2.3.0.tar.gz && cd jellyfish-2.3.0 && ./configure --prefix $DEST --enable-python-binding && make -j $NUM_THREADS install)
 mv $BINDIR/jasper.sh $BINDIR/jasper.sh.bak && \
-JPATH=`ls -d $LIBDIR/python*/site-packages/jellyfish.py` && \
+JPATH=`ls -d $LIBDIR/python*/site-packages/jellyfish.py |tail -n 1` && \
 PPATH=`dirname $JPATH` && \
-sed s,export PYTHONPATH=\$PYTHONPATH,export PYTHONPATH=$PPATH, $BINDIR/jasper.sh.bak > $BINDIR/jasper.sh && \
+sed s,^export\ PYTHONPATH=\$PYTHONPATH,export\ PYTHONPATH=$PPATH, $BINDIR/jasper.sh.bak > $BINDIR/jasper.sh && \
+chmod 0755 $BINDIR/jasper.sh && \
 echo "Installation successful"
