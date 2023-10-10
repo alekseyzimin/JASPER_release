@@ -8,13 +8,13 @@ JASPER (Jellyfish based Assembly Sequence Polisher for Error Reduction) is an ef
   
 # Installation insructions
 
-To install, first download the latest distribution tarball JASPER-X.X.X.tar.gz (not one of the Source files) from the github release page https://github.com/alekseyzimin/EviAnn_release/releases. Replace X's below with the version number. Then run:
+To install, first download the latest distribution tarball JASPER-X.X.X.tar.gz (not one of the Source files) from the github release page https://github.com/alekseyzimin/JASPER_release/releases. Replace X's below with the version number. Then run:
 ```
 $ tar xvzf JASPER-X.X.X.tar.gz
 $ cd JASPER-X.X.X
 $ ./install.sh
 ```
-The installation script will configure and make all necessary packages.  The EviAnn executables will appear under bin/.  You can run JASPER from anywhere by executing /path_to/JASPER-X.X.X/bin/jasper.sh.  JASPER installs jellyfish k-mer counter by default, and adds the path to the jellyfish python binding to jasper.sh.
+The installation script will configure and make all necessary packages.  The JASPER executable jasper.sh will appear under bin/.  You can run JASPER from anywhere by executing /path_to/JASPER-X.X.X/bin/jasper.sh.  JASPER installs jellyfish k-mer counter by default, and adds the path to the jellyfish python binding to jasper.sh.
 
 ## Only for developers
 
