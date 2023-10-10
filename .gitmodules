@@ -1,6 +1,3 @@
 [submodule "JASPER"]
 	path = JASPER
 	url = git@github.com:alguoo314/JASPER.git
-[submodule "jellyfish"]
-	path = jellyfish
-	url = https://github.com/alekseyzimin/Jellyfish.git
